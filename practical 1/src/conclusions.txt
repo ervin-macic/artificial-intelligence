@@ -1,7 +1,0 @@
-All combinations except TreeSearch | DepthFirstFrontier terminate.
-This case we exceed Java heap space (throws exception java.lang.OutOfMemoryError)
-This makes sense for the npuzzle considering that DFS with Tree search potentially does R -> L -> R -> L -> ... into infinity.
-The state space in the npuzzle is inherently cyclic considering that any action can be undone.
-
-GraphSearch | DepthFirstFrontier worked surprisingly well compared to GraphSearch | BreadthFirstFrontier
-

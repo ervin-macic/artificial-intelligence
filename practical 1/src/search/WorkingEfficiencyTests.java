@@ -6,6 +6,7 @@ public class WorkingEfficiencyTests {
     public static void main(String[] args) {
 
 		// npuzzle setup
+
 		Tiles npuzzleInitialConfiguration = new Tiles(new int[][] {
 			{ 7, 4, 2 },
 			{ 8, 1, 3 },
@@ -15,11 +16,47 @@ public class WorkingEfficiencyTests {
         GoalTest npuzzleGoalTest = new TilesGoalTest();
 		
         // tour setup
+
         Cities romania = SetUpRomania.getRomaniaMapSmall();
 		City startCity = romania.getState("Bucharest");
 		
 		GoalTest tourGoalTest = new TourGoalTest(romania.getAllCities(), startCity);
+
+        // *******************************************************************************
+        // SPECIAL IterativeDeepeningTreeSearch
+        // *******************************************************************************
         
+        IterativeDeepeningTreeSearch idts = new IterativeDeepeningTreeSearch();
+
+        // n puzzle analysis using IterativeDeepeningTreeSearch
+
+        Node sol = idts.search(new Node(null, null, npuzzleInitialConfiguration), npuzzleGoalTest);
+        System.out.println();
+        System.out.println(
+            "n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier"
+        );
+        System.out.println("Number of nodes generated: " + idts.getGeneratedNodeCount());
+        System.out.println("Frontier max size: " + idts.getMaxFrontierSize());
+        System.out.println();
+        // new NPuzzlePrinting().printSolution(sol);
+        
+        // tour analysis using IterativeDeepeningTreeSearch
+
+        sol = idts.search(new Node(null, null, new TourState(startCity)), tourGoalTest);
+        
+        System.out.println();
+        System.out.println(
+            "tour | IterativeDeepeningTreeSearch | DepthFirstFrontier"
+        );
+        System.out.println("Number of nodes generated: " + idts.getGeneratedNodeCount());
+        System.out.println("Frontier max size: " + idts.getMaxFrontierSize());
+        System.out.println();
+        // new TourPrinting().printSolution(sol);
+
+        // *******************************************************************************
+        // STANDARD {GraphSearch, TreeSearch} X {BreadthFirstFrontier, DepthFirstFrontier}
+        // *******************************************************************************
+
         Frontier[] frontiers = {
             new BreadthFirstFrontier(),
             new DepthFirstFrontier(),
@@ -46,7 +83,7 @@ public class WorkingEfficiencyTests {
                 System.out.println("Number of nodes generated: " + search.getGeneratedNodeCount());
                 System.out.println("Frontier max size: " + frontier.getMaxFrontierSize());
                 System.out.println();
-                new NPuzzlePrinting().printSolution(solution);
+                // new NPuzzlePrinting().printSolution(solution);
                 
                 // tour analysis using frontier and search 
 
@@ -61,7 +98,7 @@ public class WorkingEfficiencyTests {
                 System.out.println("Number of nodes generated: " + search.getGeneratedNodeCount());
                 System.out.println("Frontier max size: " + frontier.getMaxFrontierSize());
                 System.out.println();
-                new TourPrinting().printSolution(solution);
+                // new TourPrinting().printSolution(solution);
             }
         }
 	}

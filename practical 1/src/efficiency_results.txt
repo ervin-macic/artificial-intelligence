@@ -1,3 +1,14 @@
+
+n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier
+Number of nodes generated: 1211842
+Frontier max size: 24
+
+
+tour | IterativeDeepeningTreeSearch | DepthFirstFrontier
+Number of nodes generated: 41626
+Frontier max size: 21
+
+
 n puzzle | GraphSearch | BreadthFirstFrontier
 Number of nodes generated: 7477
 Frontier max size: 2834
@@ -28,13 +39,7 @@ Number of nodes generated: 102
 Frontier max size: 40
 
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
-        at java.base/java.util.Arrays.copyOf(Arrays.java:3720)
-        at java.base/java.util.Arrays.copyOf(Arrays.java:3689)
-        at java.base/java.util.Vector.grow(Vector.java:261)
-        at java.base/java.util.Vector.grow(Vector.java:266)
-        at java.base/java.util.Vector.add(Vector.java:813)
-        at java.base/java.util.Vector.addElement(Vector.java:648)
-        at java.base/java.util.Stack.push(Stack.java:67)
-        at search.DepthFirstFrontier.addNode(DepthFirstFrontier.java:15)
-        at search.TreeSearch.search(TreeSearch.java:23)
-        at search.WorkingEfficiencyTests.main(WorkingEfficiencyTests.java:39)
+        at java.base/java.util.LinkedHashMap$LinkedKeySet.iterator(LinkedHashMap.java:543)
+        at java.base/java.util.HashSet.iterator(HashSet.java:173)
+        at search.TreeSearch.search(TreeSearch.java:21)
+        at search.WorkingEfficiencyTests.main(WorkingEfficiencyTests.java:76)

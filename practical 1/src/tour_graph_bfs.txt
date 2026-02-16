@@ -1,0 +1,52 @@
+tour | GraphSearch | BreadthFirstFrontier
+0: start
+
+Bucharest
+
+1: drive for 211km to
+
+Fagaras
+
+2: drive for 99km to
+
+Sibiu
+
+3: drive for 140km to
+
+Arad
+
+4: drive for 75km to
+
+Zerind
+
+5: drive for 71km to
+
+Oradea
+
+6: drive for 151km to
+
+Sibiu
+
+7: drive for 80km to
+
+Rimnicu Vilcea
+
+8: drive for 146km to
+
+Craiova
+
+9: drive for 138km to
+
+Pitesti
+
+10: drive for 101km to
+
+Bucharest
+
+11: drive for 90km to
+
+Giurgui
+
+12: drive for 90km to
+
+Bucharest

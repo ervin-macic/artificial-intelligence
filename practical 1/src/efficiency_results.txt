@@ -1,0 +1,40 @@
+n puzzle | GraphSearch | BreadthFirstFrontier
+Number of nodes generated: 7477
+Frontier max size: 2834
+
+
+tour | GraphSearch | BreadthFirstFrontier
+Number of nodes generated: 2075
+Frontier max size: 418
+
+
+n puzzle | TreeSearch | BreadthFirstFrontier
+Number of nodes generated: 2298274
+Frontier max size: 1473871
+
+
+tour | TreeSearch | BreadthFirstFrontier
+Number of nodes generated: 75973
+Frontier max size: 44217
+
+
+n puzzle | GraphSearch | DepthFirstFrontier
+Number of nodes generated: 110898
+Frontier max size: 46127
+
+
+tour | GraphSearch | DepthFirstFrontier
+Number of nodes generated: 102
+Frontier max size: 40
+
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3720)
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3689)
+        at java.base/java.util.Vector.grow(Vector.java:261)
+        at java.base/java.util.Vector.grow(Vector.java:266)
+        at java.base/java.util.Vector.add(Vector.java:813)
+        at java.base/java.util.Vector.addElement(Vector.java:648)
+        at java.base/java.util.Stack.push(Stack.java:67)
+        at search.DepthFirstFrontier.addNode(DepthFirstFrontier.java:15)
+        at search.TreeSearch.search(TreeSearch.java:23)
+        at search.WorkingEfficiencyTests.main(WorkingEfficiencyTests.java:39)

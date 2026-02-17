@@ -18,7 +18,22 @@ Max frontier size is tiny, only 24 (n puzzle) and 21 (tour).
 ### GraphSearch with DepthFirstFrontier
 GraphSearch | DepthFirstFrontier worked surprisingly well compared to GraphSearch | BreadthFirstFrontier
 
+### npuzzle
 
+The exact size of the state space of the npuzzle is $\frac{9!}{2} = 181440$.
+
+Interesting to compare these numbers to the number of nodes generated: 
+
+        n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier
+        Number of nodes generated: 1211842
+        Frontier max size: 24
+
+        n puzzle | GraphSearch | BreadthFirstFrontier
+        Number of nodes generated: 7477
+        Frontier max size: 2834
+
+        n puzzle | TreeSearch | BreadthFirstFrontier
+        Number of nodes generated: 2298274
 
 ## Implementation remarks:
 

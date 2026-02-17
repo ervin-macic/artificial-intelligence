@@ -35,6 +35,7 @@ Interesting to compare these numbers to the number of nodes generated:
         n puzzle | TreeSearch | BreadthFirstFrontier
         Number of nodes generated: 2298274
 
+A similar analysis can be done for the tour problem with $9!=362,880$ states
 ## Implementation remarks:
 
 1. Wanted to abstract away the problems in a Problem interface and 

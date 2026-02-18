@@ -1,0 +1,45 @@
+
+n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier
+Number of nodes generated: 1211842
+Frontier max size: 24
+
+
+tour | IterativeDeepeningTreeSearch | DepthFirstFrontier
+Number of nodes generated: 41626
+Frontier max size: 21
+
+
+n puzzle | GraphSearch | BreadthFirstFrontier
+Number of nodes generated: 7477
+Frontier max size: 2834
+
+
+tour | GraphSearch | BreadthFirstFrontier
+Number of nodes generated: 2075
+Frontier max size: 418
+
+
+n puzzle | TreeSearch | BreadthFirstFrontier
+Number of nodes generated: 2298274
+Frontier max size: 1473871
+
+
+tour | TreeSearch | BreadthFirstFrontier
+Number of nodes generated: 75973
+Frontier max size: 44217
+
+
+n puzzle | GraphSearch | DepthFirstFrontier
+Number of nodes generated: 110898
+Frontier max size: 46127
+
+
+tour | GraphSearch | DepthFirstFrontier
+Number of nodes generated: 102
+Frontier max size: 40
+
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.LinkedHashMap$LinkedKeySet.iterator(LinkedHashMap.java:543)
+        at java.base/java.util.HashSet.iterator(HashSet.java:173)
+        at search.TreeSearch.search(TreeSearch.java:21)
+        at search.WorkingEfficiencyTests.main(WorkingEfficiencyTests.java:76)

@@ -38,7 +38,7 @@ public class WorkingEfficiencyTests {
         for (Search search : searches) {
 
             // n puzzle analysis using frontier and search
-            Node solution = search.search(new Node(null, null, npuzzleInitialConfiguration), npuzzleGoalTest);
+            search.search(new Node(null, null, npuzzleInitialConfiguration), npuzzleGoalTest);
             System.out.println();
             System.out.println(
                 "n puzzle" + " | A* " +

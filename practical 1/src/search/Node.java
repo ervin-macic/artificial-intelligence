@@ -2,7 +2,7 @@ package search;
 
 public class Node {
 	public final Node parent;
-	public final Action action; // taken to get from parent state to this node's state. understand distinction between state and node
+	public final Action action; // taken to get from parent state to this node's state. understand distinction between state and node. actions can only be applied to states not nodes.
 	public final State state;
 	public final int depth;
 	

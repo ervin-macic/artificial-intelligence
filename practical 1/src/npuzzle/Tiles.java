@@ -18,6 +18,7 @@ public class Tiles implements State {
 	
 	public Tiles(int[][] tiles) {
 		width = tiles.length;
+		// assuming square (nxn) board
 		this.tiles = new int[width * width];
 		int emptyRow = -1;
 		int emptyColumn = -1;
@@ -83,6 +84,7 @@ public class Tiles implements State {
 			   Arrays.equals(tiles, other.tiles);
 	}
 	public int hashCode() {
+		// I don't think emptyTileColumn, emptyTileRow need to be included here since tiles contains this info
 		int temp = Objects.hash(width, emptyTileColumn, emptyTileRow);
 		return (101 * temp + Arrays.hashCode(tiles));
 	}

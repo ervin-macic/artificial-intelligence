@@ -7,7 +7,6 @@ import search.Frontier;
 import search.GoalTest;
 import search.GraphSearch;
 import search.Node;
-import search.Problem;
 import search.Search;
 import search.TreeSearch;
 

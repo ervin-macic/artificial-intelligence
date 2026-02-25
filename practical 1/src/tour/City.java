@@ -30,14 +30,16 @@ public class City {
 			return distance.intValue();
 	}
 	public boolean equals(Object that) {
-		if (this == that) return true;
-		if (that == null) return false;
-		if (!(that instanceof City)) return false;
+		if (this == that) return true; // check reference equality, pointing to same variable in memory
+		if (that == null) return false; 
+		if (!(that instanceof City)) return false; // is "that" an object of type City (subclass of City)?
+		// so here we know "that" is an object of class City so we're safe to cast
 		City other = (City) that;
 		
 		return name.equals(other.name);
 	}
 	public int hashCode() {
+		// this could be name.hashCode()? Or even String.hashCode(name)?
 		return Objects.hash(name);
 	}
 }

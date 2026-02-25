@@ -11,7 +11,7 @@ public class TreeSearch implements Search {
     public Node search(Node root, GoalTest goalTest) {
         frontier.clearFrontier();
         frontier.addNode(root);
-        generatedNodeCount = 1;
+        generatedNodeCount = 1; // count root when generated
         while (!frontier.isEmpty()) {
             Node leaf = frontier.removeNode();
             if (goalTest.isGoal(leaf.state)) {
@@ -21,7 +21,7 @@ public class TreeSearch implements Search {
             for (Action action : leaf.state.getApplicableActions()) {
                 State newState = leaf.state.getActionResult(action);
                 frontier.addNode(new Node(leaf, action, newState));
-                generatedNodeCount += 1;
+                generatedNodeCount += 1; // count node when generated
             }
         }
         return null;

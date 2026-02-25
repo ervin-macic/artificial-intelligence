@@ -24,7 +24,7 @@ public class BreadthFirstFrontier implements Frontier{
         return frontier.isEmpty();
     }
     public Node removeNode() {
-        return frontier.remove();
+        return frontier.remove(); // probably better to use poll which returns null instead of throwing an exception
     }
     public int getMaxFrontierSize() {
         return maxFrontierSize;

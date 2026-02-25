@@ -13,6 +13,7 @@ public class DepthFirstFrontier implements Frontier{
     }
     public void addNode(Node node) {
         frontier.push(node);
+        // Update max frontier size if we reach an all-time high
         maxFrontierSize = max(maxFrontierSize, frontier.size());
     }
     public void clearFrontier() {

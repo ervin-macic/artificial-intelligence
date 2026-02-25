@@ -2,7 +2,6 @@
 import npuzzle.*;
 import search.GoalTest;
 import search.Node;
-import search.Problem;
 import search.State;
 
 public class NPuzzleProblem implements Problem {

@@ -5,7 +5,7 @@
 All combinations except TreeSearch with DepthFirstFrontier terminate.
 This case we exceed Java heap space (throws exception `java.lang.OutOfMemoryError`)
 This makes sense for the npuzzle considering that DFS with Tree search potentially does R -> L -> R -> L -> ... into infinity.
-The state space in the npuzzle is inherently cyclic considering that any action can be undone.
+The state space in the npuzzle is cyclic considering that any action can be undone.
 
 ## Performance 
 
@@ -13,7 +13,7 @@ The state space in the npuzzle is inherently cyclic considering that any action 
 
 IterativeDeepeningTreeSearch repeatedly does depth-limited DFS.
 It generates a lot of nodes because it re-explores shallow nodes at each depth.
-Max frontier size is tiny, only 24 (n puzzle) and 21 (tour).
+Max frontier size is tiny, only 25 (n puzzle) and 22 (tour).
 
 ### GraphSearch with DepthFirstFrontier
 GraphSearch | DepthFirstFrontier worked surprisingly well compared to GraphSearch | BreadthFirstFrontier
@@ -25,15 +25,16 @@ The exact size of the state space of the npuzzle is $\frac{9!}{2} = 181440$.
 Interesting to compare these numbers to the number of nodes generated: 
 
         n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier
-        Number of nodes generated: 1211842
-        Frontier max size: 24
+        Number of nodes generated: 1211854
+        Frontier max size: 25
 
         n puzzle | GraphSearch | BreadthFirstFrontier
-        Number of nodes generated: 7477
-        Frontier max size: 2834
+        Number of nodes generated: 4579
+        Frontier max size: 1698
 
         n puzzle | TreeSearch | BreadthFirstFrontier
         Number of nodes generated: 2298274
+        Frontier max size: 1473871
 
 A similar analysis can be done for the tour problem with $9!=362,880$ states
 ## Implementation remarks:

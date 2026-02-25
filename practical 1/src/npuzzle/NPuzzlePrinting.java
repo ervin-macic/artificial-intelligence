@@ -10,7 +10,7 @@ public class NPuzzlePrinting extends Printing {
 		System.out.print(((Movement)action).name());
 	}
 	public void print(State state) {
-		Tiles tiles=(Tiles)state;
+		Tiles tiles=(Tiles)state; // downcasting State (supertype) to Tiles (subtype) so that we can access Tiles-specific methods
 		int width = tiles.getWidth();
 		int cellLength = String.valueOf(width * width).length();
 		System.out.print('-');

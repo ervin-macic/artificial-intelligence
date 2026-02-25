@@ -1,22 +1,21 @@
-
 n puzzle | IterativeDeepeningTreeSearch | DepthFirstFrontier
-Number of nodes generated: 1211842
-Frontier max size: 24
+Number of nodes generated: 1211854
+Frontier max size: 25
 
 
 tour | IterativeDeepeningTreeSearch | DepthFirstFrontier
-Number of nodes generated: 41626
-Frontier max size: 21
+Number of nodes generated: 41636
+Frontier max size: 22
 
 
 n puzzle | GraphSearch | BreadthFirstFrontier
-Number of nodes generated: 7477
-Frontier max size: 2834
+Number of nodes generated: 4579
+Frontier max size: 1698
 
 
 tour | GraphSearch | BreadthFirstFrontier
-Number of nodes generated: 2075
-Frontier max size: 418
+Number of nodes generated: 1313
+Frontier max size: 259
 
 
 n puzzle | TreeSearch | BreadthFirstFrontier
@@ -30,16 +29,19 @@ Frontier max size: 44217
 
 
 n puzzle | GraphSearch | DepthFirstFrontier
-Number of nodes generated: 110898
-Frontier max size: 46127
+Number of nodes generated: 68217
+Frontier max size: 29633
 
 
 tour | GraphSearch | DepthFirstFrontier
-Number of nodes generated: 102
-Frontier max size: 40
+Number of nodes generated: 69
+Frontier max size: 26
 
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
-        at java.base/java.util.LinkedHashMap$LinkedKeySet.iterator(LinkedHashMap.java:543)
-        at java.base/java.util.HashSet.iterator(HashSet.java:173)
+        at java.base/java.util.HashMap.resize(HashMap.java:700)
+        at java.base/java.util.HashMap.putVal(HashMap.java:625)
+        at java.base/java.util.HashMap.put(HashMap.java:608)
+        at java.base/java.util.HashSet.add(HashSet.java:220)
+        at npuzzle.Tiles.getApplicableActions(Tiles.java:62)
         at search.TreeSearch.search(TreeSearch.java:21)
         at search.WorkingEfficiencyTests.main(WorkingEfficiencyTests.java:76)

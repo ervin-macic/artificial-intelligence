@@ -2,7 +2,6 @@
 
 import search.GoalTest;
 import search.Node;
-import search.Problem;
 import search.State;
 
 public class TourProblem implements Problem {

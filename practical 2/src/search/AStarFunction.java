@@ -1,11 +1,11 @@
 package search;
 
 public class AStarFunction implements NodeFunction {
-    protected NodeFunction h;
+    protected NodeFunction herusFunction;
     public AStarFunction(NodeFunction heuristicFunction) {
-        this.h = heuristicFunction;
+        this.herusFunction = heuristicFunction;
     }
-    public float f(Node n) {
-        return n.gValue + h.f(n);
+    public float nodeFunction(Node n) {
+        return n.gValue + herusFunction.nodeFunction(n);
     }
 }

@@ -2,7 +2,7 @@ package search;
 import tour.*;
 import npuzzle.*;
 
-public class WorkingEfficiencyTests {
+public class WorkingEfficiencyTests2 {
     public static void main(String[] args) {
 
 		// npuzzle setup

@@ -6,7 +6,7 @@ public class Node {
 	public final State state;
 	public final int depth;
 	public float value;
-	public float gValue;
+	public int gValue;
 
 	public Node(Node parent, Action action, State state, int depth) {
 		this.parent = parent;
@@ -15,11 +15,10 @@ public class Node {
 		this.depth = depth;
 		this.value = 0;
 		if (parent != null) {
-			this.gValue = parent.gValue + action.cost(parent, action, this);
+			this.gValue = parent.gValue + action.cost(parent, this);
 		} else {
 			this.gValue = 0;
 		}
-		
 	}
 	public Node(Node parent, Action action, State state) {
 		this.parent = parent;
@@ -27,5 +26,10 @@ public class Node {
 		this.state = state;
 		this.depth = 0;
 		this.value = 0;
+		if (parent != null) {
+			this.gValue = parent.gValue + action.cost(parent, this);
+		} else {
+			this.gValue = 0;
+		}
 	}
 }

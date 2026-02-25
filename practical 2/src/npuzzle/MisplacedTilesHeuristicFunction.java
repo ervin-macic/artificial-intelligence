@@ -3,7 +3,7 @@ import search.Node;
 import search.NodeFunction;
 
 public class MisplacedTilesHeuristicFunction implements NodeFunction {
-    public float f(Node n) {
+    public float nodeFunction(Node n) {
         Tiles s = (Tiles) n.state;
         int width = s.getWidth();
         int misplaced = 0;

@@ -73,7 +73,7 @@ public class Tiles implements State {
 		return new Tiles(width, newTiles, newEmptyTileRow, newEmptyTileColumn);
 	}
 	public boolean equals(Object that) {
-		if (this == that) return true;
+		if (this == that) return true; //redundant
 		if (that == null) return false;
 		if (!(that instanceof Tiles)) return false;
 		Tiles other = (Tiles) that;

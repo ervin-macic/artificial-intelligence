@@ -16,7 +16,7 @@ public class Road implements Action {
 		this.targetCity = targetCity;
 		this.length = length;
 	}
-	public int cost() {
+	public int cost(Node parent, Node child) {
 		return length;
 	}
 	public int cost(Node n, Action a, Node n_prim) {

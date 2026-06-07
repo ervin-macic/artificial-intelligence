@@ -20,7 +20,7 @@ public class TourHeuristicFunction implements NodeFunction {
 
         // unvisited set
         Set<City> unvisited = new LinkedHashSet<>(allCitiesSet);
-        unvisited.removeAll(visited);
+        unvisited.removeAll(allCitiesSet);
 
         if (unvisited.isEmpty()) {
             return currentCity.getShortestDistanceTo(goalCity);

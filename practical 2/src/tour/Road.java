@@ -4,8 +4,6 @@ import java.util.Objects;
 import search.Action;
 import search.Node; 
 
-// why is this an implementation of Action? what happens when I have to extend the initial
-// interface with cost(n,a,n')? For now, I just implement the cost function in a dumb way
 public class Road implements Action {
 	public final City sourceCity;
 	public final City targetCity;
@@ -17,9 +15,6 @@ public class Road implements Action {
 		this.length = length;
 	}
 	public int cost(Node parent, Node child) {
-		return length;
-	}
-	public int cost(Node n, Action a, Node n_prim) {
 		return length;
 	}
 	public boolean equals(Object that) {

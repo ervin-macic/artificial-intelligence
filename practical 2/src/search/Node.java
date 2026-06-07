@@ -14,9 +14,9 @@ public class Node {
 		this.state = state;
 		this.depth = depth;
 		this.value = 0;
-		if (parent != null) {
+		if (parent != null) { // not root
 			this.gValue = parent.gValue + action.cost(parent, this);
-		} else {
+		} else { // root
 			this.gValue = 0;
 		}
 	}
